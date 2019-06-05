@@ -1,0 +1,23 @@
+﻿@model AppointmentCalendar.Web.Models.CalendarDayViewModel
+
+<td class="calendar-day @(Model.IsCurrentMonth?"":"outside")">
+    <div class="date"> @Model.Date </div>
+    @foreach (var appointment in Model.TodaysAppointments)
+    {<div>
+            <div class="event @(appointment.StartDate == Model.CurrentDate ? "begin" : "")  @(appointment.EndDate == Model.CurrentDate ? "end" : "")">
+                @if (appointment.StartDate == Model.CurrentDate)
+                {
+                    @appointment.Summary
+                    <br />
+                    @appointment.Location
+                }
+                else
+                {
+                    <br />
+                    <br />
+                }
+            </div>
+            <button type="button" class="hidden js-eventEdit" data-toggle="ajax-modal" data-target="#edit-appointment" data-url="@Url.Action("Edit",new { id = appointment.Id})">Edit</button>
+        </div>
+    }
+</td>

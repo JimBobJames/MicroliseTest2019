@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentCalendar.Web", "AppointmentCalendar.Web\AppointmentCalendar.Web.csproj", "{323B40B9-F832-44E3-8428-80F3B704EFA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentCalendar.Web.Test", "AppointmentCalendar.Web.Test\AppointmentCalendar.Web.Test.csproj", "{D141A4D6-5AE7-454B-858A-1E0BC06741C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentCalendar.Domain", "AppointmentCalendar.Domain\AppointmentCalendar.Domain.csproj", "{AA5EF313-3644-4EB4-9F02-510020CC6040}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppointmentCalendar.Repository", "AppointmentCalendar.Repository\AppointmentCalendar.Repository.csproj", "{3FA171AA-728F-4671-843E-3FAA0E109003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentCalendar.Repository.Test", "AppointmentCalendar.Repository.Test\AppointmentCalendar.Repository.Test.csproj", "{CC104E62-B3EF-424A-8F1F-C74B571597AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentCalendar.Service", "AppointmentCalendar.Service\AppointmentCalendar.Service.csproj", "{333C073C-EED5-458D-97E1-BD39A1A91D44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentCalendar.Service.Test", "AppointmentCalendar.Service.Test\AppointmentCalendar.Service.Test.csproj", "{AE503CED-A04A-41BA-A800-0C98C086F1B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{323B40B9-F832-44E3-8428-80F3B704EFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323B40B9-F832-44E3-8428-80F3B704EFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323B40B9-F832-44E3-8428-80F3B704EFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323B40B9-F832-44E3-8428-80F3B704EFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D141A4D6-5AE7-454B-858A-1E0BC06741C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D141A4D6-5AE7-454B-858A-1E0BC06741C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D141A4D6-5AE7-454B-858A-1E0BC06741C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D141A4D6-5AE7-454B-858A-1E0BC06741C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5EF313-3644-4EB4-9F02-510020CC6040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5EF313-3644-4EB4-9F02-510020CC6040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5EF313-3644-4EB4-9F02-510020CC6040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5EF313-3644-4EB4-9F02-510020CC6040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA171AA-728F-4671-843E-3FAA0E109003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA171AA-728F-4671-843E-3FAA0E109003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA171AA-728F-4671-843E-3FAA0E109003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA171AA-728F-4671-843E-3FAA0E109003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC104E62-B3EF-424A-8F1F-C74B571597AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC104E62-B3EF-424A-8F1F-C74B571597AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC104E62-B3EF-424A-8F1F-C74B571597AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC104E62-B3EF-424A-8F1F-C74B571597AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333C073C-EED5-458D-97E1-BD39A1A91D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333C073C-EED5-458D-97E1-BD39A1A91D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333C073C-EED5-458D-97E1-BD39A1A91D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333C073C-EED5-458D-97E1-BD39A1A91D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE503CED-A04A-41BA-A800-0C98C086F1B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE503CED-A04A-41BA-A800-0C98C086F1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE503CED-A04A-41BA-A800-0C98C086F1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE503CED-A04A-41BA-A800-0C98C086F1B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3D3BACB-319E-471E-8FC3-E8808E2366CA}
+	EndGlobalSection
+EndGlobal

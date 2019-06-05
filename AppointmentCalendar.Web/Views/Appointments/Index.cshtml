@@ -1,0 +1,66 @@
+﻿@model AppointmentCalendar.Web.Models.CalendarViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Appointments Calendar</h2>
+
+@if (ViewData.ModelState.IsValid)
+{
+    <table class="calendar-table table table-condensed table-tight">
+        <thead>
+            <tr>
+                <td colspan="7" style="text-align: center">
+                    <table style="white-space: nowrap; width: 100%">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;">
+                                    <span>
+                                        <button type="button" class="btn btn-primary" data-toggle="ajax-modal" data-target="#add-appointment" data-url="@Url.Action("Create")">
+                                            New Appointment
+                                        </button>
+                                        <a asp-action="Index" class="btn btn-default" asp-route-year="@Model.CurrentMonth.AddMonths(-1).Year" asp-route-month="@Model.CurrentMonth.AddMonths(-1).Month">Previous Month</a>
+                                        @Html.Label($"{Model.CurrentMonth:MMM yyyy}")
+                                        <a asp-action="Index" class="btn btn-default" asp-route-year="@Model.CurrentMonth.AddMonths(1).Year" asp-route-month="@Model.CurrentMonth.AddMonths(1).Month">Next Month</a>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th> Sunday </th>
+                <th> Monday </th>
+                <th> Tuesday </th>
+                <th> Wednesday </th>
+                <th> Thursday </th>
+                <th> Friday </th>
+                <th> Saturday </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @for (var day = 0; day < (Model.DisplayEndDate - Model.DisplayStartDate).TotalDays; day++)
+                {
+                    @await Html.PartialAsync("_CalendarDay", new AppointmentCalendar.Web.Models.CalendarDayViewModel() { Appointments = Model.Appointments, CurrentMonth = Model.CurrentMonth, OffSet = day })
+                    if (day > 0 && day < (Model.DisplayEndDate - Model.DisplayStartDate).TotalDays && (day + 1) % 7 == 0)
+                    {
+                    @:</tr><tr>
+                    }
+                }
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <label>Unable to load calendar</label>
+    <div asp-validation-summary="All" class="text-danger"></div>
+}
+
+
+<div id="modal-placeholder"></div>

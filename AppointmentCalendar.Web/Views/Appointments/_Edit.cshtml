@@ -1,0 +1,55 @@
+﻿@model AppointmentCalendar.Web.Models.AppointmentViewModel
+
+<div class="modal fade" id="edit-Appointment" tabindex="-1" role="dialog" aria-labelledby="editAppointmentLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="editUserLabel">Edit Appointment</h4>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Edit">
+                    <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()" />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <label asp-for="Summary" class="control-label input-sm"></label>
+                        </div><div class="col-xs-10">
+                            <input asp-for="Summary" class="form-control input-sm" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <label asp-for="Location" class="control-label input-sm"></label>
+                        </div><div class="col-xs-10">
+                            <input asp-for="Location" class="form-control input-sm" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <label asp-for="StartDate" class="control-label input-sm"></label>
+                        </div>
+                        <div class="col-xs-4">
+                            <input asp-for="StartDate" class="form-control input-sm" type="date" />
+                        </div>
+                        <div class="col-xs-2">
+                            <label asp-for="EndDate" class="control-label input-sm"></label>
+                        </div>
+                        <div class="col-xs-4">
+                            <input asp-for="EndDate" class="form-control input-sm" type="date" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" data-save="modal">Save</button>
+                        <a class="btn btn-primary" id="DeleteAppointment" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
