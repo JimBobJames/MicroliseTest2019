@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using AppointmentCalendar.Domain.Implementations;
 using AppointmentCalendar.Service.DTOs;
 
 namespace AppointmentCalendar.Service.Contracts

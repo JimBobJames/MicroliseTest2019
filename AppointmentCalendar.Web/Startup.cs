@@ -59,6 +59,7 @@ namespace AppointmentCalendar.Web
 
             services.AddTransient<IValidator<NewAppointmentViewModel>, NewAppointmentValidator>();
             services.AddTransient<IValidator<AppointmentViewModel>, AppointmentValidator>();
+            services.AddTransient<IValidator<Domain.Implementations.Appointment>, Repository.Validators.AppointmentValidator>();
 
             services.AddTransient<IAppointmentsService, AppointmentServices>();
 

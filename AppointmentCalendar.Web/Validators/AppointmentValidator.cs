@@ -15,7 +15,7 @@ namespace AppointmentCalendar.Web.Validators
             RuleFor(x => x.Location).NotEmpty().MaximumLength(255);
             RuleFor(x => x.Summary).NotEmpty().MaximumLength(255);
             RuleFor(x => x.StartDate).NotEmpty();
-            RuleFor(x => x.EndDate).NotEmpty().GreaterThanOrEqualTo(y => y.StartDate).WithMessage("Date To must be greater than Date From");
+            RuleFor(x => x.EndDate).NotEmpty().GreaterThanOrEqualTo(y => y.StartDate).WithMessage("End Date must not be before the Start Date");
         }
     }
 }

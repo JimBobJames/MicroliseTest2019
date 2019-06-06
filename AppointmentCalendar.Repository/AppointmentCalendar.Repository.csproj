@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AppointmentCalendar.Domain\AppointmentCalendar.Domain.csproj" />
+    <ProjectReference Include="..\AppointmentCalendar.Repository.Contracts\AppointmentCalendar.Repository.Contracts.csproj" />
+    <ProjectReference Include="..\AppointmentCalendar.Repository.Validators\AppointmentCalendar.Repository.Validators.csproj" />
   </ItemGroup>
 
 </Project>

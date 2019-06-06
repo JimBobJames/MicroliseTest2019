@@ -11,7 +11,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AppointmentCalendar.Domain\AppointmentCalendar.Domain.csproj" />
-    <ProjectReference Include="..\AppointmentCalendar.Repository\AppointmentCalendar.Repository.csproj" />
+    <ProjectReference Include="..\AppointmentCalendar.Repository.Contracts\AppointmentCalendar.Repository.Contracts.csproj" />
+    <ProjectReference Include="..\AppointmentCalendar.Service.Contracts\AppointmentCalendar.Service.Contracts.csproj" />
+    <ProjectReference Include="..\AppointmentCalender.Service.DTOs\AppointmentCalendar.Service.DTOs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
 
 </Project>

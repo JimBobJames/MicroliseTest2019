@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
-namespace AppointmentCalendar.Repository
+namespace AppointmentCalendar.Repository.Exceptions
 {
     [Serializable]
     public class EntityNotFoundException : Exception

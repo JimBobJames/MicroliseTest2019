@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -15,7 +15,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AppointmentCalendar.Repository\AppointmentCalendar.Repository.csproj" />
+    <ProjectReference Include="..\AppointmentCalendar.Service.Contracts\AppointmentCalendar.Service.Contracts.csproj" />
     <ProjectReference Include="..\AppointmentCalendar.Service\AppointmentCalendar.Service.csproj" />
+    <ProjectReference Include="..\AppointmentCalender.Service.DTOs\AppointmentCalendar.Service.DTOs.csproj" />
   </ItemGroup>
 
 </Project>

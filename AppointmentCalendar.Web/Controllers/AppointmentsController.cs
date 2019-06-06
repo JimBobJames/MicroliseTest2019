@@ -60,7 +60,7 @@ namespace AppointmentCalendar.Web.Areas.Calendar.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(NewAppointmentViewModel model)
+        public IActionResult Create(NewAppointmentViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace AppointmentCalendar.Web.Areas.Calendar.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(AppointmentViewModel model)
+        public IActionResult Edit(AppointmentViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace AppointmentCalendar.Web.Areas.Calendar.Controllers
             return PartialView("_Edit", model);
         }
 
-        public async Task<IActionResult> Delete(int id)
+        public IActionResult Delete(int id)
         {
             _appointmentService.Delete(id);
 

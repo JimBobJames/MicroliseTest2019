@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using AppointmentCalendar.Domain.Contracts;
 using AppointmentCalendar.Repository.Contexts;
 using AppointmentCalendar.Repository.Contracts;
+using AppointmentCalendar.Repository.Exceptions;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;

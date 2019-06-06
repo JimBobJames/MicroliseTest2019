@@ -1,17 +1,17 @@
-using AppointmentCalendar.Service.Contracts;
 using AutoMapper;
 using Moq;
 using NUnit.Framework;
 using AppointmentCalendar.Web.Profile;
 using AppointmentCalendar.Service.Implementations;
 using AppointmentCalendar.Web.Areas.Calendar.Controllers;
-using AppointmentCalendar.Service.DTOs;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using AppointmentCalendar.Web.Models;
 using System.Linq;
 using System.Threading.Tasks;
 using AppointmentCalendar.Web.Validators;
+using AppointmentCalendar.Service.Contracts;
+using AppointmentCalendar.Service.DTOs;
 
 namespace Tests
 {
@@ -215,7 +215,7 @@ namespace Tests
                 EndDate = DateTime.Today,
                 Location = "Location",
                 Summary = "Summary"
-            }).Result;
+            });
 
             _service.Verify(x => x.Add(It.IsAny<AppointmentDTO>()), Times.Once());
         }
@@ -277,9 +277,9 @@ namespace Tests
         }
 
         [Test]
-        public async Task GivenValidAppoinmentWhenAddingThenSubmitsToService()
+        public void GivenValidAppoinmentWhenAddingThenSubmitsToService()
         {
-            IActionResult result = await _controller.Edit(new AppointmentViewModel()
+            IActionResult result =  _controller.Edit(new AppointmentViewModel()
             {
                 Id = 1,
                 StartDate = DateTime.Today,
@@ -294,7 +294,7 @@ namespace Tests
         [Test]
         public void GivenAppoinmentWhenDeletingThenSubmitsToService()
         {
-            IActionResult result = _controller.Delete(1).Result;
+            IActionResult result = _controller.Delete(1);
 
             _service.Verify(x => x.Delete(It.IsAny<int>()), Times.Once());
         }
